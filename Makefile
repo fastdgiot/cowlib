@@ -21,16 +21,17 @@ LOCAL_DEPS = crypto
 DOC_DEPS = asciideck
 
 TEST_DEPS = $(if $(CI_ERLANG_MK),ci.erlang.mk) base32 horse proper jsx \
-	structured-header-tests uritemplate-tests
-dep_base32 = git https://hub.fastgit.org/dnsimple/base32_erlang main
-dep_horse = git https://hub.fastgit.org/ninenines/horse.git master
-dep_jsx = git https://hub.fastgit.org/talentdeficit/jsx v2.10.0
-dep_structured-header-tests = git https://hub.fastgit.org/httpwg/structured-header-tests e614583397e7f65e0082c0fff3929f32a298b9f2
-dep_uritemplate-tests = git https://hub.fastgit.org/uri-templates/uritemplate-test master
+	decimal structured-header-tests uritemplate-tests
+dep_base32 = git https://gitee.com/fastdgiot/base32_erlang main
+dep_horse = git https://gitee.com/fastdgiot/horse.git master
+dep_jsx = git https://gitee.com/fastdgiot/jsx v2.10.0
+dep_decimal = git https://gitee.com/fastdgiot/decimal 0.6.2
+dep_structured-header-tests = git https://gitee.com/fastdgiot/structured-header-tests main
+dep_uritemplate-tests = git https://gitee.com/fastdgiot/uritemplate-test master
 
 # CI configuration.
 
-dep_ci.erlang.mk = git https://hub.fastgit.org/ninenines/ci.erlang.mk master
+dep_ci.erlang.mk = git https://gitee.com/fastdgiot/ci.erlang.mk master
 DEP_EARLY_PLUGINS = ci.erlang.mk
 
 AUTO_CI_OTP ?= OTP-21+
